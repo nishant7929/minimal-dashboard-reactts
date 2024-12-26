@@ -164,8 +164,12 @@ export default function Router() {
         },
       ],
     },
-
+    
     // Dashboard
+    {
+      path: '/',
+      element: <Navigate to="/dashboard" replace />,
+    },
     {
       path: 'dashboard',
       element: (
@@ -252,6 +256,7 @@ export default function Router() {
 
     // Main Routes
     {
+      path: 'home',
       element: <MainLayout />,
       children: [
         { element: <HomePage />, index: true },
